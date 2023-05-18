@@ -3,7 +3,7 @@ import 'package:flutter_application_todolistapp/model/todo_item.dart';
 
 class NetworkManager {
   late final Dio _dio;
-  final baseUrl = 'https://de96-103-169-238-51.ngrok-free.io';
+  final baseUrl = 'https://543d-103-111-100-43.ngrok-free.app';
   NetworkManager(){
     _dio = Dio();
   }

@@ -28,7 +28,7 @@ class ToDoItem {
       id: map['id'] != null ? map['id'] as int : null,
       title: map['title'] as String,
       description: map['description'] as String,
-      isDone: map['isDone'] as bool,
+      isDone: map['isDone'] == true,
     );
   }
 
