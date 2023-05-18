@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_todolistapp/pages/form_page.dart';
 import 'package:flutter_application_todolistapp/utils/network_manager.dart';
 import 'package:flutter_application_todolistapp/widget/item_widget.dart';
 import '../model/todo_item.dart';
@@ -90,7 +91,12 @@ void refreshData(){
         ),
       ),
       floatingActionButton: FloatingActionButton(
-      onPressed: (){},
+      onPressed: ()async {
+        await Navigator.push(context, MaterialPageRoute(builder: (context){
+          return const FormPage();
+        }));
+        refreshData();
+      },
       child: const Icon(Icons.add),
       ),
     );
