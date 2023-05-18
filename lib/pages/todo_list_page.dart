@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_todolistapp/pages/form_page.dart';
+import 'package:flutter_application_todolistapp/pages/todo_done_page.dart';
 import 'package:flutter_application_todolistapp/utils/network_manager.dart';
 import 'package:flutter_application_todolistapp/widget/item_widget.dart';
 import '../model/todo_item.dart';
@@ -61,7 +62,11 @@ void refreshData(){
               children: [
                 Text('To Do List', style: textTheme.bodyLarge),
                 TextButton(
-                  onPressed: (){}, 
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const ToDonePage();
+                    }));
+                  }, 
                   child: Text(
                     "Sudah Diselesaikan $totalDone",
                     style: const TextStyle(
@@ -82,7 +87,7 @@ void refreshData(){
                 child: Text('Tidak ada data'),
               )
               : ListView.builder(itemBuilder: (context, index){
-                return ItemWidget(todoItem: todos[index]);
+                return ItemWidget(todoItem: todos[index], handleRefresh: refreshData,);
               },
               itemCount: todos.length,
               )
