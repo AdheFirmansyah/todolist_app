@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_todolistapp/utils/network_manager.dart';
-import 'package:flutter_application_todolistapp/widget/itemwidget.dart';
+import 'package:flutter_application_todolistapp/widget/item_widget.dart';
 import '../model/todo_item.dart';
 
 class TodoListPage extends StatefulWidget {
@@ -19,11 +19,13 @@ void refreshData(){
   setState(() {
     isLoading=true;
   });
+
   NetworkManager().getTodosIsDone(true).then((value) {
     totalDone = value.length;
     setState(() {
     });
   });
+
   NetworkManager().getTodosIsDone(false).then((value) {
     todos= value;
     setState(() {

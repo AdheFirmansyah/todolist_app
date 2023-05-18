@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_application_todolistapp/model/todo_item.dart';
+import 'package:flutter_application_todolistapp/model/todo_item.dart';  
 
 class NetworkManager {
   late final Dio _dio;
-  final baseUrl = 'https://b5a5-103-111-100-43.ngrok-free.app';
+  final baseUrl = 'https://de96-103-169-238-51.ngrok-free.io';
   NetworkManager(){
     _dio = Dio();
   }
