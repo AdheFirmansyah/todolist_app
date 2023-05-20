@@ -48,7 +48,7 @@ void refreshData(){
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('ToDoList'),
+      appBar: AppBar(title: const Text('Aplikasi Daftar Kegiatan Harian'),
       ),
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -60,7 +60,7 @@ void refreshData(){
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('To Do List', style: textTheme.bodyLarge),
+                Text('Daftar Kegiatan', style: textTheme.bodyLarge),
                 TextButton(
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context){
